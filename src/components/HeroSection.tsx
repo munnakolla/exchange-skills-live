@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BookOpen, Star } from "lucide-react";
-import heroImage from "@/assets/hero-skillswap.jpg";
-
+import { ArrowRight, Users, BookOpen, Star, Code, Palette, Music, Languages } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-subtle">
@@ -59,22 +57,65 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Visual - Icon-based Design */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-strong">
-              <img
-                src={heroImage}
-                alt="People learning and teaching skills together"
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            {/* Main gradient background */}
+            <div className="relative rounded-2xl overflow-hidden shadow-strong h-[600px] bg-gradient-hero flex items-center justify-center">
+              {/* Animated skill icons grid */}
+              <div className="grid grid-cols-3 gap-8 p-12">
+                <div className="flex flex-col items-center space-y-4 floating-animation">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <Code className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-white/80 font-medium">Programming</span>
+                </div>
+                
+                <div className="flex flex-col items-center space-y-4 floating-animation" style={{ animationDelay: '1s' }}>
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <Palette className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-white/80 font-medium">Design</span>
+                </div>
+                
+                <div className="flex flex-col items-center space-y-4 floating-animation" style={{ animationDelay: '2s' }}>
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <Music className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-white/80 font-medium">Music</span>
+                </div>
+                
+                <div className="flex flex-col items-center space-y-4 floating-animation" style={{ animationDelay: '0.5s' }}>
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <Languages className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-white/80 font-medium">Languages</span>
+                </div>
+                
+                <div className="flex flex-col items-center space-y-4 floating-animation" style={{ animationDelay: '1.5s' }}>
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <BookOpen className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-white/80 font-medium">Academic</span>
+                </div>
+                
+                <div className="flex flex-col items-center space-y-4 floating-animation" style={{ animationDelay: '2.5s' }}>
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                    <Users className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-white/80 font-medium">Business</span>
+                </div>
+              </div>
+              
+              {/* Overlay effects */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
             </div>
             
-            {/* Floating cards */}
+            {/* Floating notification cards */}
             <div className="absolute -top-6 -left-6 bg-card p-4 rounded-xl shadow-medium border border-card-border floating-animation">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">🎸</span>
+                  <Music className="h-5 w-5 text-white" />
                 </div>
                 <div>
                   <p className="font-semibold text-sm">Guitar Lessons</p>
@@ -86,11 +127,23 @@ const HeroSection = () => {
             <div className="absolute -bottom-6 -right-6 bg-card p-4 rounded-xl shadow-medium border border-card-border floating-animation" style={{ animationDelay: '2s' }}>
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-secondary rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">💻</span>
+                  <Code className="h-5 w-5 text-white" />
                 </div>
                 <div>
                   <p className="font-semibold text-sm">Coding Bootcamp</p>
                   <p className="text-xs text-muted-foreground">Mike R.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute top-1/2 -left-4 bg-card p-3 rounded-xl shadow-medium border border-card-border floating-animation" style={{ animationDelay: '3s' }}>
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-hero rounded-full flex items-center justify-center">
+                  <Languages className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <p className="font-semibold text-xs">Spanish</p>
+                  <p className="text-xs text-muted-foreground">Alex K.</p>
                 </div>
               </div>
             </div>
