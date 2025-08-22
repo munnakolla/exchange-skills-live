@@ -1,8 +1,26 @@
-# Welcome to your Lovable project
-
-## Project info
+# SkillSwap - Peer-to-Peer Skill Exchange Platform
 
 **URL**: https://lovable.dev/projects/ed4e590f-362f-4389-ad68-e98611209db9
+
+## 🚀 Features
+
+### ✅ Authentication System
+- **Sign In/Sign Up**: Complete authentication flow with form validation
+- **User Context**: Global state management for authentication
+- **Protected Routes**: Dashboard and user-specific pages require authentication
+- **Persistent Sessions**: User data persists across browser sessions
+- **Loading States**: Smooth loading indicators during authentication
+
+### 🎯 User Experience
+- **Dynamic Navigation**: Header changes based on authentication status
+- **User Dashboard**: Personalized dashboard with stats, sessions, and activities
+- **Profile Management**: User avatars, skills, and profile information
+- **Toast Notifications**: Real-time feedback for user actions
+
+### 🛡️ Security & Validation
+- **Form Validation**: Email validation, password confirmation, required fields
+- **Error Handling**: Comprehensive error messages and user feedback
+- **Route Protection**: Automatic redirects for unauthorized access
 
 ## How can I edit this code?
 
